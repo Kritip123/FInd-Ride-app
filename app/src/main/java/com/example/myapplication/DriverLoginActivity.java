@@ -52,9 +52,11 @@ public class DriverLoginActivity extends AppCompatActivity {
                                     String tempPass=documentSnapshot.getString("password");
                                     boolean authenticated=documentSnapshot.getBoolean("authenticated");
 
-                                    if(tempmobile.equalsIgnoreCase(mobile)&&tempPass.equalsIgnoreCase(pass)) {
+                                    if(tempmobile.equalsIgnoreCase(mobile)&&tempPass.equalsIgnoreCase(pass))
+                                    {
                                         if (authenticated) {
                                             Intent intent = new Intent(DriverLoginActivity.this, UpdateLocationActivity.class);
+                                            intent.putExtra("mobile", tempmobile);
                                             startActivity(intent);
                                             finish();
                                             count = true;
