@@ -79,7 +79,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         location2.setLatitude(cusLat);
         location2.setLongitude(cuslong);
 
-        //Finds the distance between the two location
+        //Finds the dāistance between the two location
         double distance=location1.distanceTo(location2)/1000;
         DecimalFormat f = new DecimalFormat("##.00");
         if(Math.floor(distance)!=0)
