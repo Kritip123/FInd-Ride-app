@@ -45,7 +45,8 @@ public class OTPActivity extends AppCompatActivity implements View.OnClickListen
     boolean pressed;
 
     //init
-    private void init(){
+    private void init()
+    {
         phoneText = findViewById(R.id.phoneNumberText);
         ed1=findViewById(R.id.otpET1);
         ed2=findViewById(R.id.otpET2);
@@ -67,15 +68,12 @@ public class OTPActivity extends AppCompatActivity implements View.OnClickListen
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_o_t_p);
         mAuth = FirebaseAuth.getInstance();
         init();
-
-
-
-
 
         pressed=false;
         //The 6 editText in OTP communicating with each other
@@ -200,7 +198,8 @@ public class OTPActivity extends AppCompatActivity implements View.OnClickListen
 
     //When Clicked on submit
     @Override
-    public void onClick(View v) {
+    public void onClick(View v)
+    {
         if(v.getId() == btn_verify.getId())
         {
             //Getting the ids
@@ -258,7 +257,8 @@ public class OTPActivity extends AppCompatActivity implements View.OnClickListen
     }
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
         @Override
-        public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
+        public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential)
+        {
             //Getting the code sent by SMS
             String code = phoneAuthCredential.getSmsCode();
             //sometime the code is not detected automatically
@@ -307,7 +307,8 @@ public class OTPActivity extends AppCompatActivity implements View.OnClickListen
         //signing the user
         signInWithPhoneAuthCredential(credential);
     }
-    private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
+    private void signInWithPhoneAuthCredential(PhoneAuthCredential credential)
+    {
         mAuth.signInWithCredential(credential)
                 .addOnCompleteListener(OTPActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
