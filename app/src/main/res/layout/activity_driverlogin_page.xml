@@ -4,21 +4,21 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/colorPrimary"
+    android:background="@color/white"
     tools:context=".driverloginPage">
 
     <ImageView
         android:id="@+id/icon"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_centerHorizontal="true"
-        android:layout_centerInParent="true"
+        android:layout_marginTop="100dp"
         android:contentDescription="@string/app_name"
         android:src="@drawable/icon" />
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/userbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
         android:textColor="@android:color/white"
         android:background="@drawable/buttonbg1"
         app:strokeColor="@android:color/white"
@@ -26,20 +26,20 @@
         android:paddingHorizontal="10dp"
         android:onClick="driverloginIntent"
         android:text="@string/login"
-        android:layout_marginVertical="40dp"
+        android:layout_marginTop="40dp"
         android:layout_below="@+id/icon"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/driverbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
         android:layout_centerHorizontal="true"
         android:textColor="@android:color/white"
         android:paddingHorizontal="10dp"
         android:onClick="driverregisterIntent"
         android:text="@string/register"
         android:background="@drawable/buttonbg1"
-        android:layout_marginVertical="15dp"
+        android:layout_marginTop="20dp"
         android:layout_below="@+id/userbtn"/>
 
 </RelativeLayout>

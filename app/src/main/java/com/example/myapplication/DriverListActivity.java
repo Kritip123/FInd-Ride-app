@@ -105,12 +105,13 @@ public class DriverListActivity extends AppCompatActivity
                             String tempLat=documentSnapshot.getString("latitude");
                             String tempLon=documentSnapshot.getString("longitude");
                             String phno=documentSnapshot.getString("mobile");
+                            String ctype=documentSnapshot.getString("class_of_vehicle");
                             double distance=distance(Double.parseDouble(tempLat),lat,Double.parseDouble(tempLon),lon);
                             boolean authenticated=documentSnapshot.getBoolean("authenticated");
 
                             //Filtering out if the person is authenticated and if he is closer to the customer (3 km radius)
                             if(authenticated&&distance<=3)
-                              driverLists.add(new DriverList(tempName,String.format("%.2f", distance)+" km",Double.parseDouble(tempLat),Double.parseDouble(tempLon),phno));
+                              driverLists.add(new DriverList(tempName,String.format("%.2f", distance)+" km",Double.parseDouble(tempLat),Double.parseDouble(tempLon),phno,ctype));
                         }
 
                         //Sorting the Arraylist according to proximity of the customer

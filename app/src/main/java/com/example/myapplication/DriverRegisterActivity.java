@@ -84,7 +84,7 @@ public class DriverRegisterActivity extends AppCompatActivity implements Adapter
             }
         });
 
-        String veh[]={"Class Of Vehicle (TAP HERE)","Auto","Rickshaw","Toto", "Taxi","Chota Hati","Van","Magic Car"};
+        String veh[]={"Class Of Vehicle (TAP HERE)","Auto","Rickshaw","Toto", "Taxi","Chota Hathi","Van","Magic Gaadi"};
         ArrayAdapter arrayAdapter=new ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item,veh);
         class_of_vehicle.setAdapter(arrayAdapter);
         class_of_vehicle.setOnItemSelectedListener(this);

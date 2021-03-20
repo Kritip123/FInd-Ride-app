@@ -6,13 +6,15 @@ public class DriverList
     private String dis;
     private double lat,lon;
     private String phno;
-    public DriverList(String name,String dis,double lat,double lon,String phno)
+    private String car_type;
+    public DriverList(String name,String dis,double lat,double lon,String phno, String car_type)
     {
         this.name=name;
         this.dis=dis;
         this.lat=lat;
         this.lon=lon;
         this.phno=phno;
+        this.car_type = car_type;
     }
 
     public String getPhno() {
@@ -33,6 +35,7 @@ public class DriverList
     public String getDis() {
         return dis;
     }
+    public String getCar_type() {return car_type;}
     public void setDis(String dis) {
         this.dis = dis;
     }
